@@ -15,7 +15,7 @@ for(let i = 0; i<selectPlayerArray.length;i++){
 
         const playEu = document.querySelector('#playEU')
         const playIa = document.querySelector('#playIA')
-        playIa.setAttribute('src', "/src/pedra.png")
+        playIa.setAttribute('src', "./src/pedra.png")
 
         imagem = e.target.getAttribute('src')
         alt = e.target.getAttribute('alt')
