@@ -1,0 +1,149 @@
+
+:root{
+    --fonteTitulo :'Atma', cursive;
+    --fontColorPadrao: white;
+}
+
+html,body,h1,div,figure{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+html{
+    background-color: white;
+}
+body{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: blueviolet;
+    margin: 0 auto;
+    box-shadow: 1px 2px 8px black;
+    padding-top: 15px;
+}
+    header{
+
+    }
+        h1{
+            font-family: var(--fonteTitulo);
+            text-align: center;
+            color: var(--fontColorPadrao);
+            text-shadow: 1px 1px 8px black;
+        }
+
+
+    .flex-main{
+        display: flex;
+        width: 100%;
+    } 
+    .flex-ciculoGrande{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+        .ciculoApresentacao{
+            width: 20%;
+            min-width: 100px;
+            max-width: 150px;
+            border : 2px solid black;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: white;
+            margin-top: 30px;
+        }
+            .ciculoApresentacao__img{
+                background-color: cornflowerblue;
+                border-radius: 50%;
+            }
+    .flex-ciculoPequeno{
+        display: flex;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+
+    }
+        .ciculoApresentacao--pequeno{
+            min-width: 80px;
+            max-width: 100px;
+            cursor: pointer;
+        }
+        .ciculoApresentacao--pequeno:hover{
+            border: 1px solid red;
+        }
+    
+    #jogar{
+        display: block;
+        border:none;
+        border-radius: 20px;
+        background-color: rgb(247, 144, 60);
+        color: var(--fontColorPadrao);
+        font-size: 35px;
+        padding: 7px;
+        width: 90%;
+        max-width: 300px;
+        margin: 20px auto;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.479);
+        cursor: pointer;
+    }
+    #jogar:hover{
+        transform: translateY(3px);
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.479);
+    }
+    #jogar:active{
+        transform: translateY(5px);
+        box-shadow: 1px 0 5px rgba(0, 0, 0, 0.479);
+    }
+    .rodadas{
+        display: flex;
+        font-size: 35px;
+        font-weight: bold;
+        color: var(--fontColorPadrao);
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .placar__container{
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 30px;
+        width: 100%;
+        max-width: 900px;
+    }
+        .placar{
+            font-size: 20px;
+            color: var(--fontColorPadrao);
+            background-color: rgb(247, 144, 60);
+            box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.479);
+            border-radius: 30px;
+            padding: 10px 0;
+            width: 90px;
+            text-align: center;
+        }
+        #jogar:active{
+            background-color: green;
+
+        }
+
+        .ativado{
+            animation: colorir 3s ease 1;
+        }
+
+        @keyframes colorir {
+            0%{
+                background-color: rgb(247, 144, 60);
+            }
+            50%{
+                background-color: green;
+            }
+            100%{
+                background-color: rgb(247, 144, 60);
+            }
+        }
