@@ -20,7 +20,7 @@ for(let i = 0; i<selectPlayerArray.length;i++){
         imagem = e.target.getAttribute('src')
         alt = e.target.getAttribute('alt')
 
-        playEu.setAttribute('src', imagem)
+        playEu.setAttribute('src', '.'+imagem)
         playEu.setAttribute('alt', alt)
         
         
