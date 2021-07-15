@@ -34,7 +34,7 @@ jogar.addEventListener('click',()=>{
     let index = getARondomNumber(0,2)
     let selectIA = jogadas[index]
     let selectEU = playEu.getAttribute('alt')
-    playIa.setAttribute('src', "/src/"+selectIA+".png")
+    playIa.setAttribute('src', "./src/"+selectIA+".png")
     
     if(selectIA ==='pedra'&& selectEU==='tesoura'||selectIA ==='papel'&& selectEU==='pedra'||selectIA ==='tesoura'&& selectEU==='papel'){
         pontuacaoIA++
