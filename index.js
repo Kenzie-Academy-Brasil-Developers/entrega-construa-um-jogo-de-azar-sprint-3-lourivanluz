@@ -20,8 +20,10 @@ for(let i = 0; i<selectPlayerArray.length;i++){
         imagem = e.target.getAttribute('src')
         alt = e.target.getAttribute('alt')
 
-        playEu.setAttribute('src', '.'+imagem)
+        playEu.setAttribute('src', imagem)
         playEu.setAttribute('alt', alt)
+        console.log(playEu)
+        console.log(playIa)
 
         
     })
@@ -35,6 +37,7 @@ jogar.addEventListener('click',()=>{
     let selectIA = jogadas[index]
     let selectEU = playEu.getAttribute('alt')
     playIa.setAttribute('src', "./src/"+selectIA+".png")
+    console.log(playIa)
     
     if(selectIA ==='pedra'&& selectEU==='tesoura'||selectIA ==='papel'&& selectEU==='pedra'||selectIA ==='tesoura'&& selectEU==='papel'){
         pontuacaoIA++
