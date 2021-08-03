@@ -1,8 +1,38 @@
+const getARondomNumber = (min,max)=>{
+    return Math.floor(Math.random()*(max-min+1) + min)
+}
+
+const atualizaDados = (pontuacaoEu,pontuacaoIA,rodada,dalay)=>{
+    setTimeout(()=>{
+        document.querySelector('#placar__eu').innerHTML = pontuacaoEu
+        document.querySelector('#placar__ia').innerHTML = pontuacaoIA
+        document.querySelector('#rodada').innerHTML = rodada
+
+    },dalay)
+    
+}
+
+const animaElemento = (elemento,classAnimada,dalay)=>{
+    elemento.classList.add(classAnimada)
+    setTimeout(()=>{
+        elemento.classList.remove(classAnimada)
+
+    },dalay)  
+}
+
+const alterarImagemComDalay = (elemento,imagem,dalay)=>{
+    setTimeout(()=>{
+        elemento.setAttribute('src', imagem)
+    },dalay)
+}
+
 const selectPlay = document.querySelectorAll('.select_player')
 const jogar = document.querySelector('#jogar')
 const opcoesJogadaArray = ['pedra','papel','tesoura']
 
 const selectPlayerArray = [...selectPlay]
+
+
 let imagem = ''
 let alt = ''
 let pontuacaoEu = 0
@@ -59,48 +89,13 @@ jogar.addEventListener('click',()=>{
     if(selectIA ==='pedra'&& selectEU==='tesoura'||selectIA ==='papel'&& selectEU==='pedra'||selectIA ==='tesoura'&& selectEU==='papel'){
         pontuacaoIA++
         animaElemento(divPlacarIA,'placar--animado',1500)
-        //ativar a div pra pintar de verde
 
     }else if (selectEU!==selectIA) {
         pontuacaoEu++
         animaElemento(divPlacarEu,'placar--animado',1500)
-        //ativar a div pra pintar de verde
+
     }
     rodada++
     
     atualizaDados(pontuacaoEu,pontuacaoIA,rodada,900)
-})
-
-
-
-function getARondomNumber(min,max){
-    return Math.floor(Math.random()*(max-min+1) + min)
-}
-
-function atualizaDados(pontuacaoEu,pontuacaoIA,rodada,dalay){
-    setTimeout(()=>{
-        document.querySelector('#placar__eu').innerHTML = pontuacaoEu
-        document.querySelector('#placar__ia').innerHTML = pontuacaoIA
-        document.querySelector('#rodada').innerHTML = rodada
-
-    },dalay)
-    
-}
-
-
-function animaElemento(elemento,classAnimada,dalay){
-    elemento.classList.add(classAnimada)
-    setTimeout(()=>{
-        elemento.classList.remove(classAnimada)
-
-    },dalay)  
-}
-
-function alterarImagemComDalay(elemento,imagem,dalay){
-    setTimeout(()=>{
-        elemento.setAttribute('src', imagem)
-    },dalay)
-}
-
-
-  
+})  

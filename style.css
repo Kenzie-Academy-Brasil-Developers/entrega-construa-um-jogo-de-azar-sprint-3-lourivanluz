@@ -81,9 +81,6 @@ body{
             max-width: 100px;
             cursor: pointer;
         }
-        /* #teste:checked{
-            border: 1px solid red;
-        } */
         .ativado{
             background-color: rgb(236, 78, 78);
         }
